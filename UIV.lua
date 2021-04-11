@@ -29,7 +29,7 @@ end
 
 local MESSS = game.Players.LocalPlayer.Character.Name
 
-SendMessage("https://discordapp.com/api/webhooks/781872448803045416/-XZPeZQVj88W1wrxffyRSpswtGsIBwBqglsLW4ab9j7YrJyn-Tx3Uf1nLaMd4hLA9vUT", MESSS .. " excute it from"...game.PlaceId, "SCT BANLIST")
+SendMessage("https://discordapp.com/api/webhooks/781872448803045416/-XZPeZQVj88W1wrxffyRSpswtGsIBwBqglsLW4ab9j7YrJyn-Tx3Uf1nLaMd4hLA9vUT", MESSS .. " excute it from"..game.PlaceId, "SCT BANLIST")
 game.Players.LocalPlayer:Kick("You were ban from script tools from using expired script")
 wait(1)
 local ts = game:GetService("TeleportService")
